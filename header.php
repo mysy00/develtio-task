@@ -23,7 +23,7 @@
 
 
 	<header id="header">
-			<div class="container mb-4 mx-auto">
+			<div class="container py-2 mb-4 mx-auto">
 				<div class="xl:flex items-stretch relative xl:justify-between">
 					<div class="flex justify-between items-center xl:items-stretch">
 						<div class="xl:absolute bottom-0 z-10 left-0">
@@ -63,7 +63,7 @@
 							'container_class' => 'hidden mt-4 p-4 xl:mt-0 xl:p-0 xl:bg-transparent xl:block',
 							'menu_class'      => 'xl:flex',
 							'theme_location'  => 'primary',
-							'li_class'        => 'relative text-primary font-medium text-2xl lowercase',
+							'li_class'        => 'relative text-primary font-medium text-2xl lowercase hover:text-secondary transition-color',
 							'li_class_0'      => 'xl:mx-4 xl:relative group py-6',
 							'submenu_class'   => 'hidden',
 							'fallback_cb'     => false,
@@ -86,7 +86,7 @@
 									<h2 class="text-secondary text-5xl font-bold">
 										Ubezpieczenie majątkowe
 									</h2>
-									<p class="text-white text-4xl font-bold max-w-xl">
+									<p class="mt-2 text-white text-3xl font-bold max-w-xl">
 										Skontaktuj się z nami i skorzystaj ze specjalnej oferty!
 									</p>
 								</div>
@@ -94,8 +94,8 @@
 
 							<form class="xl:col-start-2 sm:mx-auto mt-10 mx-4 rounded-lg bg-white relative z-0 p-10 max-w-[489px]">
 								<p class="text-2xl font-display font-bold text-primary">Podaj dane kontaktowe, a my przygotujemy najlepszą ofertę</p>
-								<input type="text" class="px-4 py-2 mt-4 border w-full" placeholder="Imię i nazwisko" />
-								<input type="email" class="px-4 py-2 mt-4 border w-full" placeholder="Adres e-mail" />
+								<input type="text" class="px-4 py-2 mt-4 border w-full" placeholder="Imię i nazwisko" required />
+								<input type="email" class="px-4 py-2 mt-4 border w-full" placeholder="Adres e-mail" required />
 								<input type="tel" class="px-4 py-2 mt-4 border w-full" placeholder="Numer telefonu" />
 								<div class="flex gap-4 flex-grow-0">
 									<input type="text" class="min-w-0 px-4 py-2 mt-4 border" placeholder="Miejscowość" />
@@ -103,7 +103,7 @@
 								</div>
 								<div class="flex gap-3 mt-4">
 									<div>
-										<input type="checkbox" id="data-agreement" />
+										<input type="checkbox" id="data-agreement" required />
 									</div>
 									<label class="text-sm text-gray-500" for="data-agreement">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</label>
 								</div>
