@@ -92,7 +92,7 @@
 								</div>
 							</div>
 
-							<form class="xl:col-start-2 sm:mx-auto mt-10 mx-4 rounded-md bg-white relative z-0 p-10 max-w-[489px]">
+							<form class="xl:col-start-2 sm:mx-auto mt-10 mx-4 rounded-lg bg-white relative z-0 p-10 max-w-[489px]">
 								<p class="text-2xl font-display font-bold text-primary">Podaj dane kontaktowe, a my przygotujemy najlepszą ofertę</p>
 								<input type="text" class="px-4 py-2 mt-4 border w-full" placeholder="Imię i nazwisko" />
 								<input type="email" class="px-4 py-2 mt-4 border w-full" placeholder="Adres e-mail" />
@@ -108,7 +108,7 @@
 									<label class="text-sm text-gray-500" for="data-agreement">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</label>
 								</div>
 								<div class="mt-4 text-center">
-									<input type="submit" class="rounded-md bg-secondary text-white px-12 py-2 cursor-pointer hover:bg-white border hover:border-secondary hover:text-secondary transition-all">
+									<input type="submit" class="btn btn--primary">
 								</div>
 							</form>
 						</div>
