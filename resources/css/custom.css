@@ -40,3 +40,7 @@ article > *:not(.entry-content),
         }
     }
 }
+
+.bg-hero {
+    @apply bg-cover bg-center bg-no-repeat bg-[url('../images/family.png')];
+}

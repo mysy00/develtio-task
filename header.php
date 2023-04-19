@@ -6,6 +6,10 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+
 	<?php wp_head(); ?>
 </head>
 
@@ -17,65 +21,101 @@
 
 	<?php do_action( 'develtio_header' ); ?>
 
-	<header>
 
-		<div class="mx-auto container">
-			<div class="lg:flex lg:justify-between lg:items-center border-b py-6">
-				<div class="flex justify-between items-center">
-					<div>
-						<?php if ( has_custom_logo() ) { ?>
+	<header id="header">
+			<div class="container mb-4 mx-auto">
+				<div class="xl:flex items-stretch relative xl:justify-between">
+					<div class="flex justify-between items-center xl:items-stretch">
+						<div class="xl:absolute bottom-0 z-10 left-0">
+							<?php if ( has_custom_logo() ) { ?>
                             <?php the_custom_logo(); ?>
-						<?php } else { ?>
+							<?php } else { ?>
 							<a href="<?php echo get_bloginfo( 'url' ); ?>" class="font-extrabold text-lg uppercase">
-								<?php echo get_bloginfo( 'name' ); ?>
-							</a>
+									<?php echo get_bloginfo( 'name' ); ?>
+								</a>
 
-							<p class="text-sm font-light text-gray-600">
-								<?php echo get_bloginfo( 'description' ); ?>
-							</p>
+								<p class="text-sm font-light text-gray-600">
+									<?php echo get_bloginfo( 'description' ); ?>
+								</p>
+							<?php } ?>
+						</div>
 
-						<?php } ?>
-					</div>
-
-					<div class="lg:hidden">
-						<a href="#" aria-label="Toggle navigation" id="primary-menu-toggle">
-							<svg viewBox="0 0 20 20" class="inline-block w-6 h-6" version="1.1"
-								 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-								<g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-									<g id="icon-shape">
-										<path d="M0,3 L20,3 L20,5 L0,5 L0,3 Z M0,9 L20,9 L20,11 L0,11 L0,9 Z M0,15 L20,15 L20,17 L0,17 L0,15 Z"
-											  id="Combined-Shape"></path>
+						<div class="xl:hidden">
+							<a href="#" aria-label="Toggle navigation" id="primary-menu-toggle">
+								<svg viewBox="0 0 20 20" class="inline-block w-6 h-6" version="1.1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink">
+									<g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+										<g id="icon-shape">
+											<path
+												d="M0,3 L20,3 L20,5 L0,5 L0,3 Z M0,9 L20,9 L20,11 L0,11 L0,9 Z M0,15 L20,15 L20,17 L0,17 L0,15 Z"
+												id="Combined-Shape"></path>
+										</g>
 									</g>
-								</g>
-							</svg>
-						</a>
+								</svg>
+							</a>
+						</div>
 					</div>
-				</div>
 
-				<?php
-				wp_nav_menu(
-					array(
-						'container_id'    => 'primary-menu',
-						'container_class' => 'hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block',
-						'menu_class'      => 'lg:flex lg:-mx-4',
-						'theme_location'  => 'primary',
-						'li_class'        => 'lg:mx-4',
-						'fallback_cb'     => false,
-					)
-				);
+					<?php
+					wp_nav_menu(
+						array(
+							'container_id'    => 'primary-menu',
+							'container_class' => 'hidden mt-4 p-4 xl:mt-0 xl:p-0 xl:bg-transparent xl:block',
+							'menu_class'      => 'xl:flex',
+							'theme_location'  => 'primary',
+							'li_class'        => 'relative text-primary font-medium text-2xl lowercase',
+							'li_class_0'      => 'xl:mx-4 xl:relative group py-6',
+							'submenu_class'   => 'hidden',
+							'fallback_cb'     => false,
+						)
+					);
 				?>
+				</div>
 			</div>
-		</div>
-	</header>
+		</header>
 
 	<div id="content" class="site-content flex-grow">
 
 		<?php if ( is_front_page() ) { ?>
-			<!-- Start introduction -->
-			<div class="container mx-auto">
+			<div class="max-w-[1920px] mx-auto">
+				<div class="relative bg-hero">
+					<!-- <img src="<?php echo esc_url( get_theme_file_uri( 'resources/images/family.png' ) ); ?>" alt /> -->
+					<section class="grid grid-cols-2 py-16 relative">
+							<div class="font-display self-end bg-primary/70 w-full -z-1 absolute bottom-0 py-12">
+								<div class="container">
+									<h2 class="text-secondary text-5xl font-bold">
+										Ubezpieczenie majątkowe
+									</h2>
+									<p class="text-white text-4xl font-bold max-w-xl">
+										Skontaktuj się z nami i skorzystaj ze specjalnej oferty!
+									</p>
+								</div>
+							</div>
+
+							<form class="col-start-2 rounded-md bg-white relative z-0 p-10 max-w-[489px]">
+								<p class="text-2xl font-display font-bold text-primary">Podaj dane kontaktowe, a my przygotujemy najlepszą ofertę</p>
+								<input type="text" class="px-4 py-2 mt-4 border w-full" placeholder="Imię i nazwisko" />
+								<input type="email" class="px-4 py-2 mt-4 border w-full" placeholder="Adres e-mail" />
+								<input type="tel" class="px-4 py-2 mt-4 border w-full" placeholder="Numer telefonu" />
+								<div class="flex gap-4 flex-grow-0">
+									<input type="text" class="min-w-0 px-4 py-2 mt-4 border" placeholder="Miejscowość" />
+									<input type="text" class="min-w-0 px-4 py-2 mt-4 border" placeholder="Kod pocztowy" />
+								</div>
+								<div class="flex gap-3 mt-4">
+									<div>
+										<input type="checkbox" id="data-agreement" />
+									</div>
+									<label class="text-sm text-gray-500" for="data-agreement">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</label>
+								</div>
+								<div class="mt-4 text-center">
+									<input type="submit" class="rounded-md bg-secondary text-white px-12 py-2 cursor-pointer hover:bg-white border hover:border-secondary hover:text-secondary transition-all">
+								</div>
+							</form>
+					</section>
+				</div>
 				<div class="px-12 py-16 my-12 rounded-xl bg-gradient-to-r from-blue-50 from-10% via-sky-100 via-30% to-blue-200 to-90%">
                     <div class="mx-auto max-w-screen-md">
-                        <h1 class="text-3xl lg:text-6xl tracking-tight font-extrabold text-gray-800 mb-6">Start building your next <a href="https://tailwindcss.com" class="text-secondary">Tailwind CSS</a> flavoured WordPress theme
+                        <h1 class="text-3xl xl:text-6xl tracking-tight font-extrabold text-gray-800 mb-6">Start building your next <a href="https://tailwindcss.com" class="text-secondary">Tailwind CSS</a> flavoured WordPress theme
                             with <a href="https://tailpress.io" class="text-primary">TailPress</a>.</h1>
                         <p class="text-gray-600 text-xl font-medium mb-10">TailPress is your go-to starting
                             point for developing WordPress themes with Tailwind CSS and comes with basic block-editor support out
