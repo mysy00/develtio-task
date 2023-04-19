@@ -39,9 +39,6 @@
         max-width: 1440px
     }
 }
-.absolute {
-    position: absolute
-}
 .relative {
     position: relative
 }
@@ -56,9 +53,6 @@
 }
 .z-10 {
     z-index: 10
-}
-.col-start-2 {
-    grid-column-start: 2
 }
 .m-8 {
     margin: 2rem
@@ -79,6 +73,10 @@
     margin-top: 2rem;
     margin-bottom: 2rem
 }
+.mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem
+}
 .mb-1 {
     margin-bottom: 0.25rem
 }
@@ -97,6 +95,9 @@
 .mb-8 {
     margin-bottom: 2rem
 }
+.mt-10 {
+    margin-top: 2.5rem
+}
 .mt-4 {
     margin-top: 1rem
 }
@@ -105,9 +106,6 @@
 }
 .flex {
     display: flex
-}
-.grid {
-    display: grid
 }
 .hidden {
     display: none
@@ -133,6 +131,9 @@
 .min-w-0 {
     min-width: 0px
 }
+.max-w-\[1920px\] {
+    max-width: 1920px
+}
 .max-w-\[489px\] {
     max-width: 489px
 }
@@ -144,12 +145,6 @@
 }
 .max-w-xl {
     max-width: 36rem
-}
-.max-w-\[1920\[x\]\] {
-    max-width: 1920[x]
-}
-.max-w-\[1920px\] {
-    max-width: 1920px
 }
 .flex-none {
     flex: none
@@ -168,9 +163,6 @@
 }
 .list-disc {
     list-style-type: disc
-}
-.grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr))
 }
 .flex-col {
     flex-direction: column
@@ -539,6 +531,10 @@ body {
     --tw-ring-offset-color: #fff
 }
 @media (min-width: 600px) {
+    .sm\:mx-auto {
+        margin-left: auto;
+        margin-right: auto
+    }
     .sm\:w-auto {
         width: auto
     }
@@ -560,49 +556,8 @@ body {
     }
 }
 @media (min-width: 960px) {
-    .lg\:absolute {
-        position: absolute
-    }
-    .lg\:relative {
-        position: relative
-    }
-    .lg\:mx-4 {
-        margin-left: 1rem;
-        margin-right: 1rem
-    }
-    .lg\:mt-0 {
-        margin-top: 0px
-    }
-    .lg\:block {
-        display: block
-    }
-    .lg\:flex {
-        display: flex
-    }
-    .lg\:hidden {
-        display: none
-    }
-    .lg\:items-stretch {
-        align-items: stretch
-    }
-    .lg\:justify-between {
-        justify-content: space-between
-    }
-    .lg\:border-none {
-        border-style: none
-    }
-    .lg\:bg-transparent {
-        background-color: transparent
-    }
-    .lg\:p-0 {
-        padding: 0px
-    }
     .lg\:text-5xl {
         font-size: 3rem;
-        line-height: 1
-    }
-    .lg\:text-6xl {
-        font-size: 3.75rem;
         line-height: 1
     }
 }
@@ -612,6 +567,9 @@ body {
     }
     .xl\:relative {
         position: relative
+    }
+    .xl\:col-start-2 {
+        grid-column-start: 2
     }
     .xl\:mx-4 {
         margin-left: 1rem;
@@ -626,17 +584,20 @@ body {
     .xl\:flex {
         display: flex
     }
+    .xl\:grid {
+        display: grid
+    }
     .xl\:hidden {
         display: none
+    }
+    .xl\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
     }
     .xl\:items-stretch {
         align-items: stretch
     }
     .xl\:justify-between {
         justify-content: space-between
-    }
-    .xl\:border-none {
-        border-style: none
     }
     .xl\:bg-transparent {
         background-color: transparent

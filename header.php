@@ -80,8 +80,8 @@
 			<div class="max-w-[1920px] mx-auto">
 				<div class="relative bg-hero">
 					<!-- <img src="<?php echo esc_url( get_theme_file_uri( 'resources/images/family.png' ) ); ?>" alt /> -->
-					<section class="grid grid-cols-2 py-16 relative">
-							<div class="font-display self-end bg-primary/70 w-full -z-1 absolute bottom-0 py-12">
+					<section class="justify-center xl:grid xl:grid-cols-2 py-16 relative">
+							<div class="font-display self-end bg-primary/70 w-full -z-1 xl:absolute bottom-0 py-12">
 								<div class="container">
 									<h2 class="text-secondary text-5xl font-bold">
 										Ubezpieczenie majątkowe
@@ -92,7 +92,7 @@
 								</div>
 							</div>
 
-							<form class="col-start-2 rounded-md bg-white relative z-0 p-10 max-w-[489px]">
+							<form class="xl:col-start-2 sm:mx-auto mt-10 mx-4 rounded-md bg-white relative z-0 p-10 max-w-[489px]">
 								<p class="text-2xl font-display font-bold text-primary">Podaj dane kontaktowe, a my przygotujemy najlepszą ofertę</p>
 								<input type="text" class="px-4 py-2 mt-4 border w-full" placeholder="Imię i nazwisko" />
 								<input type="email" class="px-4 py-2 mt-4 border w-full" placeholder="Adres e-mail" />
@@ -113,18 +113,24 @@
 							</form>
 					</section>
 				</div>
+
+
+
+
+
+
 				<div class="px-12 py-16 my-12 rounded-xl bg-gradient-to-r from-blue-50 from-10% via-sky-100 via-30% to-blue-200 to-90%">
-                    <div class="mx-auto max-w-screen-md">
-                        <h1 class="text-3xl xl:text-6xl tracking-tight font-extrabold text-gray-800 mb-6">Start building your next <a href="https://tailwindcss.com" class="text-secondary">Tailwind CSS</a> flavoured WordPress theme
-                            with <a href="https://tailpress.io" class="text-primary">TailPress</a>.</h1>
-                        <p class="text-gray-600 text-xl font-medium mb-10">TailPress is your go-to starting
-                            point for developing WordPress themes with Tailwind CSS and comes with basic block-editor support out
-                            of the box.</p>
-                        <a href="https://github.com/jeffreyvr/tailpress"
-                            class="w-full sm:w-auto flex-none bg-gray-900 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">View
-                            on GitHub</a>
-                    </div>
-                </div>
+					<div class="mx-auto max-w-screen-md">
+							<h1 class="text-3xl xl:text-6xl tracking-tight font-extrabold text-gray-800 mb-6">Start building your next <a href="https://tailwindcss.com" class="text-secondary">Tailwind CSS</a> flavoured WordPress theme
+									with <a href="https://tailpress.io" class="text-primary">TailPress</a>.</h1>
+							<p class="text-gray-600 text-xl font-medium mb-10">TailPress is your go-to starting
+									point for developing WordPress themes with Tailwind CSS and comes with basic block-editor support out
+									of the box.</p>
+							<a href="https://github.com/jeffreyvr/tailpress"
+									class="w-full sm:w-auto flex-none bg-gray-900 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">View
+									on GitHub</a>
+					</div>
+				</div>
 			</div>
 			<!-- End introduction -->
 		<?php } ?>
