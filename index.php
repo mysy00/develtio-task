@@ -3,8 +3,8 @@
 <div class="relative">
 
 	<section class="container pt-20 pb-20">
-		<img class="hidden lg:block absolute max-h-full right-0 bottom-0" src="<?php echo esc_url( get_theme_file_uri( 'resources/images/house.png' ) ); ?>" alt>
-		<article class="container max-w-3xl">
+		<img class="hidden lg:block absolute max-h-full right-0 bottom-0 pointer-events-none -z-0" src="<?php echo esc_url( get_theme_file_uri( 'resources/images/house.png' ) ); ?>" alt>
+		<article class="container max-w-3xl relative z-0">
 			<header class="text-primary">
 				<h2 class="text-4xl sm:text-6xl">Ubezpieczenia majątkowe</h2>
 				<p class="font-display mt-3 text-2xl sm:text-4xl font-bold">Co obejmują?</p>
