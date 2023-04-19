@@ -1,5 +1,46 @@
 <?php
 
+use Carbon_Fields\Block;
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
+
+add_action('carbon_fields_register_fields', 'crb_attach_theme_options');
+function crb_attach_theme_options()
+{
+
+    // Gutenberg Block
+    Block::make(__('Rich  Accordion'))
+        ->add_fields(array(
+            Field::make('complex', 'crb_richaccordion', 'Accordion')
+                ->set_layout('tabbed-vertical')
+                ->add_fields(array(
+                    Field::make('text', 'title', __('Title')),
+                    Field::make('rich_text', 'content', __('Content')),
+                )),
+        ))
+        ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+            foreach ($fields['crb_richaccordion'] as $i) {
+                $content = apply_filters('the_content', $i['content']);
+                echo "<details>";
+                echo "<summary>$i[title]</summary>";
+                echo "<div>$content</div>";
+                echo "</details>";
+            }
+        });
+
+    // "Theme Options" tab
+    Container::make('theme_options', __('Theme Options'))
+        ->add_tab(__('Main Section'), array(
+            Field::make('image', 'content_background_image', 'Background image'),
+        ));
+}
+
+add_action( 'after_setup_theme', 'crb_load' );
+function crb_load() {
+    require_once( 'vendor/autoload.php' );
+    \Carbon_Fields\Carbon_Fields::boot();
+}
+
 /**
  * Theme setup.
  */
